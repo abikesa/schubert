@@ -416,9 +416,155 @@ document.write(`
 <em>And stol’n the impression of her fantasy ❤️</em><br />
 – <a class="reference external" href="https://www.gutenberg.org/files/1514/1514-h/1514-h.htm">Egeus</a></p>
 <p>Tokenization and commodification indeed fracture the embodied essence of “the thing,” leaving behind an abstraction that feels hollow, even deceptive. This fear reverberates not just in societal dynamics but in poetic lamentations like Egeus’s complaint in <em>A Midsummer Night’s Dream</em>. Here, the exchange of rhymes and love-tokens between Lysander and Hermia embodies the very essence of commodification: the reduction of an authentic, ineffable connection into symbolic gestures—rhymes, tokens, and sung verses.</p>
+<iframe src="https://www.youtube.com/embed/xoTqgE46Tq8?start=1380"></iframe>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text"><em>Key Words: Civilization, Unification, Defense, Surveillance, Expensive, Tactics, Strategies, Longterm, Ideological, Gen-Z, Rootless, History, Adversarial Misinformation, Internet, Effective</em>. Born in Mogadishu, Somalia, Ayaan Hirsi Ali’s journey is a testament to the resilience of the human spirit. Raised in a devout Somali Muslim family, Ayaan received a strict Muslim education and fled a forced marriage. Armed only with intellectual curiosity and unwavering determination, she sought refuge in the Netherlands, where she was first exposed to the ideas of the West. It was here that she found her voice, her passion for women’s rights, and her commitment to challenging the status quo. Ayaan has become a prominent voice for reform within Islam and has dedicated her life to advocating for the rights of women, minorities, and dissidents living under oppressive regimes. Tune in for a compelling dialogue with one of the world’s most fearless voices.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Egeus sees these tokens as simulacra, devoid of true substance. The “rhymes” and “verses of feigning love” are artificial constructs, tailored not to express but to manipulate. They “steal the impression of her fantasy,” transforming what should be a reciprocal bond into a scripted, one-sided transaction. Lysander’s tokens become tools of persuasion, more reflective of his strategic intent than his genuine affection. In this sense, Egeus’s critique aligns with the broader human anxiety about commodification—that it converts the relational into the transactional, severing the connection between the signifier and the authentic.</p>
 <p>This tension parallels Hippolyta’s trajectory. Initially, she embodied adversarial independence, a force rooted in her Amazonian essence. But the triumph of Theseus tokenized her identity, reframing it as a cooperative symbol of Athenian stability. The marriage, like Lysander’s love tokens, becomes a feigned verse—a reduction of her complexity into an emblem of Theseus’s victory. While the tokens stabilize the network by creating social harmony and political capital, they are spectral representations, hollowed out of the essence they once sought to embody.</p>
 <p>This unease resonates deeply in art, love, and society. Tokens and commodifications are tools of abstraction and efficiency, allowing complex relationships to be compressed into manageable forms. Yet, in their compression, they often fail to capture the embodied, organic nature of “the thing.” Egeus’s lament and Hippolyta’s transformation alike highlight this gap, where the poetic fear of tokenization mirrors the sociological processes of reweighting adversarial nodes into commodified outputs. The tragedy lies not in the token’s existence but in the shadow it casts over the unspoken, the embodied, and the real.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+
+<span class="c1"># Define the neural network structure</span>
+<span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;Pre-Input&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Life&#39;</span><span class="p">,</span><span class="s1">&#39;Earth&#39;</span><span class="p">,</span> <span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">,</span> <span class="p">],</span>
+        <span class="s1">&#39;Yellowstone&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Surveillance&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Input&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Anarchy&#39;</span><span class="p">,</span> <span class="s1">&#39;Monarchy&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Hidden&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;Risk&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Oligarchy&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Peers&#39;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;Output&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Existential&#39;</span><span class="p">,</span> <span class="s1">&#39;Deploy&#39;</span><span class="p">,</span> <span class="s1">&#39;Fees&#39;</span><span class="p">,</span> <span class="s1">&#39;Client&#39;</span><span class="p">,</span> <span class="s1">&#39;Confidentiality&#39;</span><span class="p">,</span>    <span class="p">]</span>
+    <span class="p">}</span>
+
+<span class="c1"># Define weights for the connections</span>
+<span class="k">def</span> <span class="nf">define_weights</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;Pre-Input-Yellowstone&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+            <span class="p">[</span><span class="mf">0.6</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.5</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.4</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.3</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.7</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.8</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.6</span><span class="p">]</span>
+        <span class="p">]),</span>
+        <span class="s1">&#39;Yellowstone-Input&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+            <span class="p">[</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">]</span>
+        <span class="p">]),</span>
+        <span class="s1">&#39;Input-Hidden&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]]),</span>
+        <span class="s1">&#39;Hidden-Output&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+            <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">]</span>
+        <span class="p">])</span>
+    <span class="p">}</span>
+
+<span class="c1"># Assign colors to nodes</span>
+<span class="k">def</span> <span class="nf">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Surveillance&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;yellow&#39;</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Monarchy&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Hidden&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Peers&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Oligarchy&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Risk&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Output&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Confidentiality&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Client&#39;</span><span class="p">,</span> <span class="s1">&#39;Fees&#39;</span><span class="p">,</span> <span class="s1">&#39;Deploy&#39;</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Existential&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
+    <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Default color</span>
+
+<span class="c1"># Calculate positions for nodes</span>
+<span class="k">def</span> <span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">center_x</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
+    <span class="n">layer_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+    <span class="n">start_y</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">layer_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># Center the layer vertically</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">center_x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">start_y</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">layer_size</span><span class="p">)]</span>
+
+<span class="c1"># Create and visualize the neural network graph</span>
+<span class="k">def</span> <span class="nf">visualize_nn</span><span class="p">():</span>
+    <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="n">define_weights</span><span class="p">()</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">center_x</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Align nodes horizontally</span>
+
+    <span class="c1"># Add nodes and assign positions</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">layer_name</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="n">y_positions</span> <span class="o">=</span> <span class="n">calculate_positions</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">center_x</span><span class="p">,</span> <span class="n">offset</span><span class="o">=-</span><span class="nb">len</span><span class="p">(</span><span class="n">layers</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">y_positions</span><span class="p">):</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="n">layer_name</span><span class="p">)</span>
+            <span class="n">pos</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span>
+            <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer_name</span><span class="p">))</span>
+
+    <span class="c1"># Add edges and weights</span>
+    <span class="k">for</span> <span class="n">layer_pair</span><span class="p">,</span> <span class="n">weight_matrix</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+        <span class="p">[(</span><span class="s1">&#39;Pre-Input&#39;</span><span class="p">,</span> <span class="s1">&#39;Yellowstone&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Yellowstone&#39;</span><span class="p">,</span> <span class="s1">&#39;Input&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Input&#39;</span><span class="p">,</span> <span class="s1">&#39;Hidden&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Hidden&#39;</span><span class="p">,</span> <span class="s1">&#39;Output&#39;</span><span class="p">)],</span>
+        <span class="p">[</span><span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Pre-Input-Yellowstone&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Yellowstone-Input&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Input-Hidden&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Hidden-Output&#39;</span><span class="p">]]</span>
+    <span class="p">):</span>
+        <span class="n">source_layer</span><span class="p">,</span> <span class="n">target_layer</span> <span class="o">=</span> <span class="n">layer_pair</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">source</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="n">source_layer</span><span class="p">]):</span>
+            <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">target</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="n">target_layer</span><span class="p">]):</span>
+                <span class="n">weight</span> <span class="o">=</span> <span class="n">weight_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+                <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="n">weight</span><span class="p">)</span>
+
+    <span class="c1"># Customize edge thickness for specific relationships</span>
+    <span class="n">edge_widths</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="s1">&#39;Hidden&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">v</span> <span class="o">==</span> <span class="s1">&#39;Kapital&#39;</span><span class="p">:</span>
+            <span class="n">edge_widths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>  <span class="c1"># Highlight key edges</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">edge_widths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Draw the graph</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+        <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">edge_widths</span>
+    <span class="p">)</span>
+    <span class="n">edge_labels</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">get_edge_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">)</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="o">=</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">edge_labels</span><span class="o">.</span><span class="n">items</span><span class="p">()})</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Save the figure to a file</span>
+    <span class="c1"># plt.savefig(&quot;figures/logo.png&quot;, format=&quot;png&quot;)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Run the visualization</span>
+<span class="n">visualize_nn</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/9b8e93c2640b16e3e3d97db6872ec0c5dd0536ed00d2da2be94a597602c05bd4.png" src="../_images/9b8e93c2640b16e3e3d97db6872ec0c5dd0536ed00d2da2be94a597602c05bd4.png" />
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
