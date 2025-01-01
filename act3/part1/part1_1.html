@@ -202,8 +202,7 @@
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Cosmic</a></li>
 
 
-<li class="toctree-l3"><a class="reference internal" href="part1_2.html">System</a></li>
-
+<li class="toctree-l3"><a class="reference internal" href="part1_2.html">Uncertainty</a></li>
 <li class="toctree-l3"><a class="reference internal" href="part1_3.html">Failure</a></li>
 
 </ul>
@@ -482,14 +481,14 @@ document.write(`
 <span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="s1">&#39;Pre-Input&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Life&#39;</span><span class="p">,</span><span class="s1">&#39;Earth&#39;</span><span class="p">,</span> <span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">,</span> <span class="p">],</span>
-        <span class="s1">&#39;Yellowstone&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;History&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;Input&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Bad&#39;</span><span class="p">,</span> <span class="s1">&#39;Good&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Yellowstone&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Genealogy&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Input&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Evil&#39;</span><span class="p">,</span> <span class="s1">&#39;Good&#39;</span><span class="p">],</span>
         <span class="s1">&#39;Hidden&#39;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s1">&#39;Islam&#39;</span><span class="p">,</span>
             <span class="s1">&#39;Narrator&#39;</span><span class="p">,</span>
             <span class="s1">&#39;Judeo-Christian&#39;</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s1">&#39;Output&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Survival&#39;</span><span class="p">,</span> <span class="s1">&#39;Discord&#39;</span><span class="p">,</span> <span class="s1">&#39;Kapital&#39;</span><span class="p">,</span> <span class="s1">&#39;Harmony&#39;</span><span class="p">,</span> <span class="s1">&#39;Transcendental&#39;</span><span class="p">,</span>    <span class="p">]</span>
+        <span class="s1">&#39;Output&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Deeds&#39;</span><span class="p">,</span> <span class="s1">&#39;Warrior&#39;</span><span class="p">,</span> <span class="s1">&#39;Transvaluation&#39;</span><span class="p">,</span> <span class="s1">&#39;Priest&#39;</span><span class="p">,</span> <span class="s1">&#39;Ascetic&#39;</span><span class="p">,</span>    <span class="p">]</span>
     <span class="p">}</span>
 
 <span class="c1"># Define weights for the connections</span>
@@ -517,7 +516,7 @@ document.write(`
 
 <span class="c1"># Assign colors to nodes</span>
 <span class="k">def</span> <span class="nf">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;History&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Genealogy&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;yellow&#39;</span>
     <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">]:</span>
         <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
@@ -531,11 +530,11 @@ document.write(`
         <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Islam&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
     <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Output&#39;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Transcendental&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Ascetic&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Harmony&#39;</span><span class="p">,</span> <span class="s1">&#39;Kapital&#39;</span><span class="p">,</span> <span class="s1">&#39;Discord&#39;</span><span class="p">]:</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Priest&#39;</span><span class="p">,</span> <span class="s1">&#39;Transvaluation&#39;</span><span class="p">,</span> <span class="s1">&#39;Warrior&#39;</span><span class="p">]:</span>
             <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Survival&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Deeds&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
     <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Default color</span>
 
@@ -603,13 +602,13 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/834226f68f3e5d7be4f52f0f462e9300deff753e2ad0197876245f051afec617.png" src="../../_images/834226f68f3e5d7be4f52f0f462e9300deff753e2ad0197876245f051afec617.png" />
+<img alt="../../_images/bafdeb0cb98a6e80beee1bb8db9472346921bd9877749a3a74bfd634e83a0712.png" src="../../_images/bafdeb0cb98a6e80beee1bb8db9472346921bd9877749a3a74bfd634e83a0712.png" />
 </div>
 </div>
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="act3/figures/blanche.*"><img alt="act3/figures/blanche.*" src="act3/figures/blanche.*" style="width: 1px; height: 1px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Nietzsche didn’t have Islamists on his mind when he worried the modernity will be in crisis of identity and how enlightenment “kills God.”</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text"><em>Narrators Are Invariably Steeped in the Dichotomy of Good &amp; Evil or Else Risk Having no Audience</em>. Nietzsche didn’t have Islamists on his mind when he worried that modernity would soon face a severe crisis of identity. He understood that enlightenment “kills God.” The west is blaming the wrong thing for its identity crisis.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <hr class="docutils" />
