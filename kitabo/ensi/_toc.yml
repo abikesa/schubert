@@ -15,9 +15,9 @@ chapters:
   # Sing O Muse!
   - file: act2/part2
     sections:
-      - title: Baseline
+      - title: Principal
         file: act2/chapter1
-      - title: Decision
+      - title: Agent
         file: act2/chapter2
       - title: Risk
         file: act2/chapter3
