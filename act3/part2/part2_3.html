@@ -382,9 +382,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -400,17 +398,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-layer-resources-and-resourcefulness"><strong>Input Layer: Resources and Resourcefulness</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hidden-layer-compression-nodes"><strong>Hidden Layer: Compression Nodes</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output-layer-emergent-dynamics"><strong>Output Layer: Emergent Dynamics</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-insights"><strong>Visualization Insights</strong></a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -422,78 +409,164 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="attribute">
 <h1>Attribute<a class="headerlink" href="#attribute" title="Permalink to this heading">#</a></h1>
-<p><strong>Yellowstone</strong> is an epic family drama about the Dutton family and their struggle to maintain control of the Yellowstone Ranch, a sprawling cattle ranch in Montana. Through the lens of the neural network model you’ve provided, we can analyze the show as a dynamic interplay between inputs (resources and resourcefulness), hidden processes (identity, tokenization, adversary networks), and outputs (joy, Schadenfreude, capital, and ecosystem dynamics).</p>
-<p><img alt="" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTAX9_ehMLWM5iT9lzsPTPJkFG60Tc3K6U1BkbxdK5o8BE67Cho" /></p>
+<p>The <strong>roots</strong>, or “Pre-Input” layer, symbolize foundational elements that provide stability and nourishment. Nodes like “Life,” “Earth,” and “Cosmos” embody deep, universal concepts, while attributes such as “Sound,” “Tactful,” and “Firm” reflect essential qualities that anchor and sustain the system. Just as roots draw nutrients from the soil to support the tree, these pre-input nodes ground the network and infuse it with potential energy and coherence.</p>
+<p>At the core lies the <strong>stem</strong>, represented by the “Yellowstone” node, “Unicameralism.” This layer functions as the tree’s trunk—a central conduit connecting the roots to the branches. It channels the foundational energy upwards, acting as a unifying and stabilizing force. The singularity of this node highlights its pivotal role as the system’s backbone, ensuring continuity and coherence between the deep origins and the expanding structures above.</p>
+<p>The <strong>branches</strong>, or “Input” layer, extend outward through nodes like “Commons” and “Lords.” These pathways channel the energy and insights derived from the roots, diversifying and distributing them to the broader system. Like branches on a tree, they form the framework for growth and interaction, reaching outward to gather and connect with external elements.</p>
+<p>The <strong>hidden layer</strong>, analogous to the leaves, consists of nodes such as “Risk,” “Oxbridge,” and “Peers.” This layer performs the essential work of processing and synthesizing information, akin to how leaves convert sunlight into energy through photosynthesis. These nodes represent the system’s capacity for adaptation, refinement, and balance, absorbing inputs and preparing them for meaningful output.</p>
+<p>The <strong>output layer</strong> represents the fruits of the tree, with nodes like “United Kingdom,” “Great Britain,” and “Heritage.” These outputs are the culmination of the entire process, embodying the system’s purpose and contribution. Like the fruit borne by a tree, these nodes symbolize the tangible outcomes that emerge from the harmonious interplay of roots, stem, branches, and leaves.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+
+<span class="c1"># Define the neural network structure</span>
+<span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;Pre-Input&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Root&#39;</span><span class="p">,</span><span class="s1">&#39;Ploughshares&#39;</span><span class="p">,</span> <span class="s1">&#39;Light&#39;</span><span class="p">,</span> <span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">,</span> <span class="p">],</span>
+        <span class="s1">&#39;Yellowstone&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Stem&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Input&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Weed&#39;</span><span class="p">,</span> <span class="s1">&#39;Branch&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Hidden&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;Canker&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Farming&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Leaf&#39;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;Output&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Transformation&#39;</span><span class="p">,</span> <span class="s1">&#39;Toxins&#39;</span><span class="p">,</span> <span class="s1">&#39;Produce&#39;</span><span class="p">,</span> <span class="s1">&#39;Nutrition&#39;</span><span class="p">,</span> <span class="s1">&#39;Starch&#39;</span><span class="p">,</span>    <span class="p">]</span>
+    <span class="p">}</span>
+
+<span class="c1"># Define weights for the connections</span>
+<span class="k">def</span> <span class="nf">define_weights</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;Pre-Input-Yellowstone&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+            <span class="p">[</span><span class="mf">0.6</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.5</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.4</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.3</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.7</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.8</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.6</span><span class="p">]</span>
+        <span class="p">]),</span>
+        <span class="s1">&#39;Yellowstone-Input&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+            <span class="p">[</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">]</span>
+        <span class="p">]),</span>
+        <span class="s1">&#39;Input-Hidden&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]]),</span>
+        <span class="s1">&#39;Hidden-Output&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+            <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
+            <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">]</span>
+        <span class="p">])</span>
+    <span class="p">}</span>
+
+<span class="c1"># Assign colors to nodes</span>
+<span class="k">def</span> <span class="nf">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Stem&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;yellow&#39;</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Pre-Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Sound&#39;</span><span class="p">,</span> <span class="s1">&#39;Tactful&#39;</span><span class="p">,</span> <span class="s1">&#39;Firm&#39;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Input&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Branch&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Hidden&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Leaf&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Farming&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Canker&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Output&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Starch&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Nutrition&#39;</span><span class="p">,</span> <span class="s1">&#39;Produce&#39;</span><span class="p">,</span> <span class="s1">&#39;Toxins&#39;</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Transformation&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
+    <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Default color</span>
+
+<span class="c1"># Calculate positions for nodes</span>
+<span class="k">def</span> <span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">center_x</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
+    <span class="n">layer_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+    <span class="n">start_y</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">layer_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># Center the layer vertically</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">center_x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">start_y</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">layer_size</span><span class="p">)]</span>
+
+<span class="c1"># Create and visualize the neural network graph</span>
+<span class="k">def</span> <span class="nf">visualize_nn</span><span class="p">():</span>
+    <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="n">define_weights</span><span class="p">()</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">center_x</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Align nodes horizontally</span>
+
+    <span class="c1"># Add nodes and assign positions</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">layer_name</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="n">y_positions</span> <span class="o">=</span> <span class="n">calculate_positions</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">center_x</span><span class="p">,</span> <span class="n">offset</span><span class="o">=-</span><span class="nb">len</span><span class="p">(</span><span class="n">layers</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">y_positions</span><span class="p">):</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="n">layer_name</span><span class="p">)</span>
+            <span class="n">pos</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span>
+            <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer_name</span><span class="p">))</span>
+
+    <span class="c1"># Add edges and weights</span>
+    <span class="k">for</span> <span class="n">layer_pair</span><span class="p">,</span> <span class="n">weight_matrix</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+        <span class="p">[(</span><span class="s1">&#39;Pre-Input&#39;</span><span class="p">,</span> <span class="s1">&#39;Yellowstone&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Yellowstone&#39;</span><span class="p">,</span> <span class="s1">&#39;Input&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Input&#39;</span><span class="p">,</span> <span class="s1">&#39;Hidden&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Hidden&#39;</span><span class="p">,</span> <span class="s1">&#39;Output&#39;</span><span class="p">)],</span>
+        <span class="p">[</span><span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Pre-Input-Yellowstone&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Yellowstone-Input&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Input-Hidden&#39;</span><span class="p">],</span> <span class="n">weights</span><span class="p">[</span><span class="s1">&#39;Hidden-Output&#39;</span><span class="p">]]</span>
+    <span class="p">):</span>
+        <span class="n">source_layer</span><span class="p">,</span> <span class="n">target_layer</span> <span class="o">=</span> <span class="n">layer_pair</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">source</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="n">source_layer</span><span class="p">]):</span>
+            <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">target</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="p">[</span><span class="n">target_layer</span><span class="p">]):</span>
+                <span class="n">weight</span> <span class="o">=</span> <span class="n">weight_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+                <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="n">weight</span><span class="p">)</span>
+
+    <span class="c1"># Customize edge thickness for specific relationships</span>
+    <span class="n">edge_widths</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="s1">&#39;Hidden&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">v</span> <span class="o">==</span> <span class="s1">&#39;Kapital&#39;</span><span class="p">:</span>
+            <span class="n">edge_widths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>  <span class="c1"># Highlight key edges</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">edge_widths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Draw the graph</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+        <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">edge_widths</span>
+    <span class="p">)</span>
+    <span class="n">edge_labels</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">get_edge_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">)</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="o">=</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">edge_labels</span><span class="o">.</span><span class="n">items</span><span class="p">()})</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Save the figure to a file</span>
+    <span class="c1"># plt.savefig(&quot;figures/logo.png&quot;, format=&quot;png&quot;)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Run the visualization</span>
+<span class="n">visualize_nn</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../../_images/91df5be082386c67218ba17c9efaa536afd8754b9e111dc3c5fb3796fad9a1bf.png" src="../../_images/91df5be082386c67218ba17c9efaa536afd8754b9e111dc3c5fb3796fad9a1bf.png" />
+</div>
+</div>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/blanche.png"><img alt="../../_images/blanche.png" src="../../_images/blanche.png" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">The structure of this neural network metaphorically mirrors a tree’s anatomy, highlighting the elegance and interconnectedness of its layers. Each layer represents a crucial element in the system’s growth, function, and balance, much like the natural components of a tree. This layered structure beautifully captures the organic interplay between grounding, growth, and emergence, showcasing the elegance of neural networks as metaphors for natural and systemic complexity. We also transform the original essay into a new interpretation inspired by the neural network structure, shifting the focus to a dynamic, living ecosystem, intertwining biological, philosophical, and socio-historical themes while maintaining the metaphorical depth. We hereby integrate the metaphorical essence of the original essay but transform its tone and structure to focus on life as an ecosystem, bridging natural and conceptual systems.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <hr class="docutils" />
-<section id="input-layer-resources-and-resourcefulness">
-<h2><strong>Input Layer: Resources and Resourcefulness</strong><a class="headerlink" href="#input-layer-resources-and-resourcefulness" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p><strong>Resources</strong>: The Yellowstone Ranch symbolizes immense physical resources—land, cattle, and water rights. These tangible assets are a constant source of conflict with adversaries such as developers, Native American tribes, and the state.</p></li>
-<li><p><strong>Resourcefulness</strong>: John Dutton and his family exhibit an extraordinary level of cunning and resourcefulness, employing both legal and extralegal means to protect their holdings. The Duttons leverage everything from political alliances to brute force to maintain control.</p></li>
-</ol>
+<p>The <strong>roots</strong>, represented as the “Pre-Input” layer, ground the system in elemental forces of growth and resilience. Nodes like “Root,” “Ploughshares,” and “Light” symbolize primordial forces of creation and sustenance, while attributes such as “Sound,” “Tactful,” and “Firm” reflect adaptive qualities essential to the ecosystem’s survival. These roots are not merely passive anchors but active agents, extracting nutrients from their environment to fuel the growth of the entire system, embodying both biological and philosophical grounding.</p>
+<p>At the heart of this network lies the <strong>stem</strong>, embodied by the “Yellowstone” node, “Stem.” Acting as the trunk of this metaphorical tree, it bridges the latent potential of the roots with the branching complexities above. This singular node serves as a dynamic nexus, channeling energy and resources upward while maintaining structural integrity. It represents unity in motion—a stabilizing force amidst the system’s inherent chaos, akin to philosophical constructs that tie disparate elements into a coherent whole.</p>
+<p>The <strong>branches</strong>, forming the “Input” layer, extend the network’s reach through nodes like “Weed” and “Branch.” These nodes diversify the flow of energy, translating foundational nourishment into pathways of interaction and exchange. Like an ecosystem responding to external forces, these branches adapt, flex, and grow, reflecting the interplay between systemic stability and external dynamism.</p>
+<p>The <strong>hidden layer</strong>, akin to the photosynthetic canopy, includes nodes such as “Canker,” “Farming,” and “Leaf.” These nodes operate as the system’s processing hubs, mediating between input and output while addressing complexities such as disease, cultivation, and adaptation. They reflect the network’s capacity for transformation, filtering inputs and optimizing outputs through a blend of resilience and resourcefulness. The hidden layer is where growth meets vulnerability, and innovation emerges as a response to challenge.</p>
+<p>Finally, the <strong>output layer</strong> manifests as the fruits of the system, through nodes like “Transformation,” “Toxins,” “Produce,” “Nutrition,” and “Starch.” These outputs are not static endpoints but dynamic indicators of the ecosystem’s success or failure. Whether nourishing or toxic, these outputs encapsulate the culmination of growth processes, reflecting the harmony—or discord—achieved by the system’s interplay. They serve as feedback loops, influencing future growth and adaptation.</p>
+<p>By reframing the network as an ecosystem, this interpretation emphasizes a living, evolving structure, resonant with biological vitality and philosophical depth. It captures the dance between chaos and order, illustrating how interconnected elements sustain and transform one another to create a dynamic whole.</p>
 <hr class="docutils" />
-</section>
-<section id="hidden-layer-compression-nodes">
-<h2><strong>Hidden Layer: Compression Nodes</strong><a class="headerlink" href="#hidden-layer-compression-nodes" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p><strong>Identity (Self, Family, Community, Tribe)</strong>:</p>
-<ul class="simple">
-<li><p>The Duttons are deeply tied to their land, seeing it as an extension of their identity. This node processes the tension between personal, familial, and tribal obligations.</p></li>
-<li><p>Kayce Dutton, for instance, struggles to reconcile his roles as a father, a member of the Dutton family, and his connection to his wife Monica’s Native American heritage.</p></li>
-<li><p>John Dutton embodies the tribe’s patriarch, compressing familial loyalty into a singular, often oppressive vision for the ranch’s future.</p></li>
-</ul>
-</li>
-<li><p><strong>Tokenization/Commodification</strong>:</p>
-<ul class="simple">
-<li><p>The land is constantly under threat of commodification, whether through real estate development or environmental exploitation. Tokenization here represents how external forces, such as corporations and governments, view the ranch not as a legacy but as an asset to be monetized.</p></li>
-<li><p>Beth Dutton plays a pivotal role in navigating this node. Her work in high-stakes finance illustrates how capital markets can be both a weapon and a threat to the Duttons’ legacy.</p></li>
-</ul>
-</li>
-<li><p><strong>Adversary Networks (Biological)</strong>:</p>
-<ul class="simple">
-<li><p>This node highlights the visceral, biological conflicts—life and death struggles that permeate the series. The physical toll on the Duttons, from near-fatal injuries to literal bloodshed, underscores the biological stakes.</p></li>
-<li><p>Rip Wheeler exemplifies this aspect, operating as a relentless enforcer who uses violence to resolve conflicts.</p></li>
-</ul>
-</li>
-</ol>
-<hr class="docutils" />
-</section>
-<section id="output-layer-emergent-dynamics">
-<h2><strong>Output Layer: Emergent Dynamics</strong><a class="headerlink" href="#output-layer-emergent-dynamics" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p><strong>Joy</strong>:</p>
-<ul class="simple">
-<li><p>Rare and fleeting in <em>Yellowstone</em>. Moments of joy—such as family dinners or Beth and Rip’s relationship—often feel precarious and overshadowed by impending tragedy.</p></li>
-</ul>
-</li>
-<li><p><strong>Freude</strong>:</p>
-<ul class="simple">
-<li><p>Schadenfreude is a recurring theme, particularly in Beth’s dealings with her enemies. Her delight in destroying foes reflects the psychological satisfaction derived from adversarial victories.</p></li>
-</ul>
-</li>
-<li><p><strong>Kapital</strong>:</p>
-<ul class="simple">
-<li><p>Economic survival is a central concern. The ranch’s future hinges on its ability to generate capital, whether through livestock operations or savvy political maneuvers.</p></li>
-</ul>
-</li>
-<li><p><strong>Schaden</strong>:</p>
-<ul class="simple">
-<li><p>This output reflects the destruction wrought by the Duttons’ adversarial strategies. Whether it’s the emotional toll on their family or the literal deaths of their enemies, Schaden captures the inevitable fallout.</p></li>
-</ul>
-</li>
-<li><p><strong>Ecosystem</strong>:</p>
-<ul class="simple">
-<li><p>The ranch’s ecosystem functions as both a literal and metaphorical output. The Duttons see themselves as stewards of the land, but their actions often lead to ecological and social instability. This tension underscores the cost of their relentless pursuit to control nature and society alike.</p></li>
-</ul>
-</li>
-</ol>
-<hr class="docutils" />
-</section>
-<section id="visualization-insights">
-<h2><strong>Visualization Insights</strong><a class="headerlink" href="#visualization-insights" title="Permalink to this heading">#</a></h2>
-<p>In the neural network, the strongest weights connect the hidden layer’s <strong>Identity</strong> and <strong>Adversary Networks</strong> nodes to <strong>Kapital</strong> in the output. This reflects the show’s core theme: the Duttons’ identity and adversarial strategies are inseparable from their pursuit of capital and control. Similarly, <strong>Tokenization</strong> feeds into <strong>Ecosystem</strong>, illustrating the show’s critique of commodification’s impact on natural and social systems.</p>
-<p>The dynamic interplay between nodes—like the trade-offs between family loyalty and ecological sustainability—mirrors the real-world complexities of preserving heritage in a modern capitalist society. <em>Yellowstone</em> thrives on these tensions, creating a narrative that is as much about survival as it is about the cost of power.</p>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -550,24 +623,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-layer-resources-and-resourcefulness"><strong>Input Layer: Resources and Resourcefulness</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hidden-layer-compression-nodes"><strong>Hidden Layer: Compression Nodes</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output-layer-emergent-dynamics"><strong>Output Layer: Emergent Dynamics</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-insights"><strong>Visualization Insights</strong></a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
