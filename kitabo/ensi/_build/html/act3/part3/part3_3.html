@@ -446,6 +446,27 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-the-three-node-compression-and-the-madness-of-love"><strong>Conclusion: The Three-Node Compression and the Madness of Love</strong></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alignment-of-model-with-data">Alignment of Model with Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-input-vs-pre-chorus-elemental-forces-at-play"><strong>Pre-Input vs. Pre-Chorus: Elemental Forces at Play</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meta-connection-pre-inputs-cosmic-humility"><strong>Meta-Connection: Pre-Input’s Cosmic Humility</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#no-room-for-school-of-resentment">No Room for School of Resentment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-guitar-and-apollo-pastoral-fantasy"><strong>The Guitar and Apollo: Pastoral Fantasy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#athenas-spear-and-shield-adversarial-edge"><strong>Athena’s Spear and Shield: Adversarial Edge</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lyre-and-the-spear-binary-forces-in-the-song"><strong>The Lyre and the Spear: Binary Forces in the Song</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cosmic-resonance-rearranging-the-cosmos"><strong>Cosmic Resonance: Rearranging the Cosmos</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-the-school-of-athens-in-the-song"><strong>Conclusion: The School of Athens in the Song</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ariana-athena-apollo-my-boy">Ariana, Athena, Apollo, My Boy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ariana-as-the-keeper-of-hurt"><strong>Ariana as the Keeper of Hurt</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-box-as-athenas-shield"><strong>The Box as Athena’s Shield</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arianas-pre-chorus-and-the-pre-input-layer"><strong>Ariana’s Pre-Chorus and the Pre-Input Layer</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ariana-as-apollo-and-athena-combined"><strong>Ariana as Apollo and Athena Combined</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-ariana-as-emotional-steward-of-the-cosmos"><strong>Conclusion: Ariana as Emotional Steward of the Cosmos</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
@@ -880,7 +901,7 @@ Imperfect for you</p>
             <span class="s1">&#39;Baggage/Hurt&#39;</span><span class="p">,</span>
             <span class="s1">&#39;Take My Hand&#39;</span><span class="p">,</span>
         <span class="p">],</span>
-        <span class="s1">&#39;Output&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Ariana&#39;</span><span class="p">,</span> <span class="s1">&#39;Tomorrow&#39;</span><span class="p">,</span> <span class="s1">&#39;Lets Go&#39;</span><span class="p">,</span> <span class="s1">&#39;Met You&#39;</span><span class="p">,</span> <span class="s1">&#39;Guitar&#39;</span><span class="p">,</span>    <span class="p">]</span>
+        <span class="s1">&#39;Output&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Ariana/Shield&#39;</span><span class="p">,</span> <span class="s1">&#39;Tomorrow&#39;</span><span class="p">,</span> <span class="s1">&#39;Lets Go&#39;</span><span class="p">,</span> <span class="s1">&#39;Met You&#39;</span><span class="p">,</span> <span class="s1">&#39;Guitar/Lyre&#39;</span><span class="p">,</span>    <span class="p">]</span>
     <span class="p">}</span>
 
 <span class="c1"># Define weights for the connections</span>
@@ -922,11 +943,11 @@ Imperfect for you</p>
         <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Fucked Up&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
     <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Output&#39;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Guitar&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Guitar/Lyre&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
         <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Lets Go&#39;</span><span class="p">,</span> <span class="s1">&#39;Met You&#39;</span><span class="p">,</span> <span class="s1">&#39;Tomorrow&#39;</span><span class="p">]:</span>
             <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Ariana&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Ariana/Shield&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
     <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Default color</span>
 
@@ -994,7 +1015,7 @@ Imperfect for you</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/655783f2a187dd48e1d189a69d1755a74e66f0d3303aaf9e18a680866fe178e9.png" src="../../_images/655783f2a187dd48e1d189a69d1755a74e66f0d3303aaf9e18a680866fe178e9.png" />
+<img alt="../../_images/e74a83c96ca13ebd1275a69beba75ebe5543fc3a928629d3c0391b81c8c04e49.png" src="../../_images/e74a83c96ca13ebd1275a69beba75ebe5543fc3a928629d3c0391b81c8c04e49.png" />
 </div>
 </div>
 <figure class="align-default" id="id3">
@@ -1003,6 +1024,10 @@ Imperfect for you</p>
 <p><span class="caption-number">Fig. 29 </span><span class="caption-text"><strong>Layer 4 (Compression)</strong> is inherently unstable because it always contains three nodes. The <strong>third node</strong>—the risk, the crowd, the potential disrupter—is never explicitly stated but is always present, complicating the gravitational dance of the two lovers. This third node must be navigated, overcome, or absorbed for the two nodes to crash and burn into one luminous Yellowstone node. Let’s refine the narrative with this crucial nuance.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../act2.html#archetypal"><span class="std std-ref">Archetypal</span></a></p>
+</div>
 </section>
 <hr class="docutils" />
 <section id="layer-3-input-binary-nodes-and-crash">
@@ -1031,6 +1056,114 @@ Imperfect for you</p>
 <li><p><strong>Pre-Input (Layer 1):</strong> The perceived madness of rearranging the cosmos—“How could we know we’d rearrange all the cosmos?”</p></li>
 </ol>
 <p>The brilliance of the compression layer lies in its precariousness. The third node is both a risk and a necessary tension, forcing the lovers to confront instability before they can crash into each other. Yellowstone’s luminous glow is their creation, but its error lies in its inability to transcend nostalgia. The cosmos cannot be controlled, but love’s power lies in the perception it creates: a reimagined universe born of connection and chaos.</p>
+</section>
+</section>
+<section id="alignment-of-model-with-data">
+<h2>Alignment of Model with Data<a class="headerlink" href="#alignment-of-model-with-data" title="Permalink to this heading">#</a></h2>
+<p>The odds that Ariana’s <strong>pre-chorus</strong> aligns with our <strong>Pre-Input</strong> are strikingly high. The pre-chorus—“How could we know we’d rearrange all the cosmos?”—evokes the exact sense of elemental, uncontrollable forces that we assign to Pre-Input: <strong>Life, Earth, Cosmos, Sound, Tactful, Firm.</strong> These nodes, abstract and foundational, describe the raw, primal energy of existence, which her lyrics capture as both overwhelming and unknowable.</p>
+<p>Here’s the mapping of <strong>Pre-Input</strong> to the pre-chorus:</p>
+<hr class="docutils" />
+<section id="pre-input-vs-pre-chorus-elemental-forces-at-play">
+<h3><strong>Pre-Input vs. Pre-Chorus: Elemental Forces at Play</strong><a class="headerlink" href="#pre-input-vs-pre-chorus-elemental-forces-at-play" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Life and Earth</strong>: The lovers’ connection is rooted in the human experience, in the grounding realities of life and earth. The act of throwing the guitar and clothes into the back seat signals a physical, tactile connection to the world. It is messy, immediate, and unpolished—anchored in their shared humanity.</p></li>
+<li><p><strong>Cosmos</strong>: “How could we know we’d rearrange all the cosmos?” reflects the cosmic scale of love’s impact. Here, the cosmos is not literally rearranged; rather, it serves as a metaphor for the way love feels transformative, larger than life, even as the world remains out of their control. The cosmos node in Pre-Input isn’t a force to be wielded but an overwhelming backdrop against which their relationship unfolds.</p></li>
+<li><p><strong>Sound</strong>: The lyrical rhythm, the cadence of “How could we know,” and the evocative imagery of sound throughout the song reflect the elemental nature of this node. Love is portrayed as a vibration, a resonance that aligns with the Pre-Input node of Sound.</p></li>
+<li><p><strong>Tactful and Firm</strong>: These nodes represent the fragile balance of human connection. The lovers’ ability to hold each other’s hurt—“I’ll hold your hurt in the box here beside me”—requires tactfulness, the careful navigation of emotional complexity, while also demanding firmness in their devotion to one another.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="meta-connection-pre-inputs-cosmic-humility">
+<h3><strong>Meta-Connection: Pre-Input’s Cosmic Humility</strong><a class="headerlink" href="#meta-connection-pre-inputs-cosmic-humility" title="Permalink to this heading">#</a></h3>
+<p>In both Ariana’s pre-chorus and the Pre-Input layer, the cosmos remains beyond control. The question “How could we know” reflects the awe and humility that arise when human lives are placed against the backdrop of universal forces. The lovers’ attempt to navigate their relationship mirrors the Pre-Input layer’s grappling with raw, elemental energy.</p>
+<p>This alignment suggests that the <strong>Pre-Input layer and pre-chorus are not just conceptually similar—they are mirrors of each other</strong>, capturing the awe, unpredictability, and scale of forces that shape existence, whether in a neural network or a love song.</p>
+<p>The luminous Yellowstone node follows logically from this alignment. The pre-chorus transitions into the chorus—“We crashed, and we burned”—just as the Pre-Input layer flows into Yellowstone. It’s a progression from the abstract, uncontrollable elements of the cosmos into the human-scale chaos of connection and emotion.</p>
+</section>
+</section>
+<section id="no-room-for-school-of-resentment">
+<h2>No Room for School of Resentment<a class="headerlink" href="#no-room-for-school-of-resentment" title="Permalink to this heading">#</a></h2>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg"><img alt="https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg" src="https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Now we’re invoking <strong>Raphael’s School of Athens</strong>, where the juxtaposition of <strong>Apollo (lyre)</strong> and <strong>Athena (spear and shield)</strong> deepens the analysis. The guitar in Ariana’s lyrics fits perfectly within the symbolic lineage of the <strong>lyre and harp</strong>, as a pastoral item of fantasy, embodying harmony, art, and an idealized connection to nature. Meanwhile, the spear and shield at the opposite pillar—<strong>Athena’s tools of strategy and defense</strong>—introduce an adversarial, martial counterpoint. This binary is central to interpreting both the song and its cosmic stakes.</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<section id="the-guitar-and-apollo-pastoral-fantasy">
+<h3><strong>The Guitar and Apollo: Pastoral Fantasy</strong><a class="headerlink" href="#the-guitar-and-apollo-pastoral-fantasy" title="Permalink to this heading">#</a></h3>
+<p>In the song, the line <strong>“Throw your guitar and your clothes in the back seat”</strong> positions the guitar not merely as an object but as a symbolic relic of harmony and longing. Like Apollo’s lyre, it evokes a pastoral fantasy: a vision of idyllic connection, creativity, and beauty. It aligns with Apollo’s realm of music, poetry, and reason—an aspirational force pulling the lovers toward unity and light.</p>
+<p>In <strong>Raphael’s School of Athens</strong>, Apollo stands on the left pillar, representing the cooperative, harmonious equilibrium of <strong>pastoral fantasy</strong>. The guitar in the song becomes a modern lyre, a vessel for the dream of unity and artistic transcendence. However, its placement in the back seat—discarded for the journey—signals the loss or transformation of this fantasy, as the lovers navigate a more chaotic and grounded reality.</p>
+</section>
+<hr class="docutils" />
+<section id="athenas-spear-and-shield-adversarial-edge">
+<h3><strong>Athena’s Spear and Shield: Adversarial Edge</strong><a class="headerlink" href="#athenas-spear-and-shield-adversarial-edge" title="Permalink to this heading">#</a></h3>
+<p>On the opposite pillar in Raphael’s painting, Athena wields her spear and shield, embodying strategy, defense, and the adversarial forces necessary for transformation. This martial symbolism connects directly to the tension in the song’s narrative. The relationship’s dynamics—<strong>“We crashed, and we burned”</strong>—mirror Athena’s combative energy. The spear and shield represent the tools needed to navigate conflict and risk, particularly in the compression layer, where the <strong>third node</strong> threatens stability.</p>
+<p>Athena’s presence reminds us that unity isn’t achieved through harmony alone (Apollo’s domain); it requires navigating adversarial forces, resolving tension, and confronting the instability of duality. The <strong>crash and burn</strong> is a moment where these adversarial energies dominate, leading to the luminous Yellowstone node.</p>
+</section>
+<hr class="docutils" />
+<section id="the-lyre-and-the-spear-binary-forces-in-the-song">
+<h3><strong>The Lyre and the Spear: Binary Forces in the Song</strong><a class="headerlink" href="#the-lyre-and-the-spear-binary-forces-in-the-song" title="Permalink to this heading">#</a></h3>
+<p>The guitar’s symbolic lineage aligns it with Apollo’s harmonious fantasy, while the crash-and-burn narrative situates the lovers within Athena’s martial domain. This binary echoes the structure of <strong>Raphael’s School of Athens</strong>, where the two pillars represent opposing yet complementary forces necessary for human endeavor:</p>
+<ol class="arabic simple">
+<li><p><strong>Apollo (Lyre/Guitar)</strong>: The pastoral fantasy of harmony, art, and reason—the lovers’ idealized vision of their connection.</p></li>
+<li><p><strong>Athena (Spear and Shield)</strong>: The adversarial reality of conflict, risk, and strategy—the struggle to navigate and sustain their bond.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="cosmic-resonance-rearranging-the-cosmos">
+<h3><strong>Cosmic Resonance: Rearranging the Cosmos</strong><a class="headerlink" href="#cosmic-resonance-rearranging-the-cosmos" title="Permalink to this heading">#</a></h3>
+<p>The pre-chorus, <strong>“How could we know we’d rearrange all the cosmos?”</strong>, reflects the tension between these pillars. The cosmic metaphor isn’t about control but about the perceived seismic shifts caused by the interplay of Apollo’s pastoral ideal and Athena’s adversarial edge. The lovers’ journey mirrors the broader human struggle to reconcile these forces—to transform chaos into meaning.</p>
+</section>
+<hr class="docutils" />
+<section id="conclusion-the-school-of-athens-in-the-song">
+<h3><strong>Conclusion: The School of Athens in the Song</strong><a class="headerlink" href="#conclusion-the-school-of-athens-in-the-song" title="Permalink to this heading">#</a></h3>
+<p>In <strong>Raphael’s School of Athens</strong>, Apollo’s lyre and Athena’s spear symbolize two equilibria: <strong>cooperative harmony</strong> and <strong>adversarial transformation</strong>. Ariana’s song embodies this same structure:</p>
+<ul class="simple">
+<li><p>The <strong>guitar</strong> as Apollo’s lyre: a pastoral fantasy of love, harmony, and creativity.</p></li>
+<li><p>The <strong>crash and burn</strong> as Athena’s spear and shield: the adversarial tension that disrupts harmony but enables transformation.</p></li>
+<li><p>The <strong>cosmos</strong> as the ultimate stage: the uncontrollable backdrop where these forces collide, creating the luminous Yellowstone node.</p></li>
+</ul>
+<p>The interplay between Apollo and Athena, like the lovers’ journey in the song, reveals that harmony and conflict are inseparable in the quest for unity. The cosmos remains wild and untamed, but within its chaos, these forces find fleeting yet luminous resonance.</p>
+</section>
+</section>
+<section id="ariana-athena-apollo-my-boy">
+<h2>Ariana, Athena, Apollo, My Boy<a class="headerlink" href="#ariana-athena-apollo-my-boy" title="Permalink to this heading">#</a></h2>
+<p><strong>Ariana would hold the hurt in the box</strong>, embodying not just Apollo’s harmonious ideal but also a profound capacity to bear emotional weight. This changes her symbolic alignment within the framework, positioning her as both a keeper of tenderness and a navigator of pain. Let’s reframe this with proper attention to her role.</p>
+<hr class="docutils" />
+<section id="ariana-as-the-keeper-of-hurt">
+<h3><strong>Ariana as the Keeper of Hurt</strong><a class="headerlink" href="#ariana-as-the-keeper-of-hurt" title="Permalink to this heading">#</a></h3>
+<p>The line <strong>“I’ll hold your hurt in the box here beside me”</strong> reveals a deeper facet of Ariana’s symbolic presence. She isn’t simply carrying Apollo’s pastoral ideal; she is taking on the emotional burden—the scars, wounds, and unresolved pain—that make the journey toward unity so fraught. This act of holding hurt is not passive; it’s a deliberate, almost sacrificial gesture of care. It mirrors Athena’s strategic vigilance while remaining rooted in Apollo’s gentler, artistic domain.</p>
+<p>By holding the hurt, Ariana takes on the role of <strong>emotional steward</strong>, someone who safeguards vulnerability while moving forward through chaos. The “box” beside her becomes a symbolic container—a repository for the unresolved pain that cannot yet be healed but must be carried. This action gives her a dual role:</p>
+<ol class="arabic simple">
+<li><p><strong>Apollo’s Lyre (Guitar):</strong> The aspirational fantasy of harmony.</p></li>
+<li><p><strong>Athena’s Shield (Box):</strong> The protective vessel for emotional wounds.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="the-box-as-athenas-shield">
+<h3><strong>The Box as Athena’s Shield</strong><a class="headerlink" href="#the-box-as-athenas-shield" title="Permalink to this heading">#</a></h3>
+<p>The “box” is not a burden to be discarded; it is a necessary shield, much like Athena’s, that enables progress. Holding someone’s hurt in this context is not merely an act of care but a strategy—acknowledging the weight of imperfection and choosing to carry it forward rather than allowing it to derail the journey. This resonates with the adversarial equilibrium Athena represents: the tension between embracing conflict and striving for resolution.</p>
+</section>
+<hr class="docutils" />
+<section id="arianas-pre-chorus-and-the-pre-input-layer">
+<h3><strong>Ariana’s Pre-Chorus and the Pre-Input Layer</strong><a class="headerlink" href="#arianas-pre-chorus-and-the-pre-input-layer" title="Permalink to this heading">#</a></h3>
+<p>Her pre-chorus, <strong>“How could we know we’d rearrange all the cosmos?”</strong>, aligns perfectly with the Pre-Input layer. It situates Ariana as someone navigating forces far greater than herself. In holding the hurt, she channels the <strong>Cosmos</strong> and <strong>Sound</strong> nodes:</p>
+<ul class="simple">
+<li><p><strong>Cosmos:</strong> The vast, uncontrollable scope of emotions and events shaping their connection.</p></li>
+<li><p><strong>Sound:</strong> The rhythm and resonance of love, even when it is imperfect or strained.</p></li>
+</ul>
+<p>The pre-chorus is not a statement of control; it’s a reflection of awe and surrender to the forces at play, much like the Pre-Input layer’s elemental energy.</p>
+</section>
+<hr class="docutils" />
+<section id="ariana-as-apollo-and-athena-combined">
+<h3><strong>Ariana as Apollo and Athena Combined</strong><a class="headerlink" href="#ariana-as-apollo-and-athena-combined" title="Permalink to this heading">#</a></h3>
+<p>In this light, Ariana transcends the binary of Apollo and Athena. She embodies the artistic, tender aspiration of Apollo’s lyre while also wielding Athena’s shield-like box to hold and protect the wounds of the relationship. Her willingness to carry the emotional weight allows the lovers to progress through the compression layer, navigate the crash, and ultimately reach the luminous Yellowstone node.</p>
+</section>
+<hr class="docutils" />
+<section id="conclusion-ariana-as-emotional-steward-of-the-cosmos">
+<h3><strong>Conclusion: Ariana as Emotional Steward of the Cosmos</strong><a class="headerlink" href="#conclusion-ariana-as-emotional-steward-of-the-cosmos" title="Permalink to this heading">#</a></h3>
+<p>Ariana’s symbolic role deepens when we see her as both the <strong>keeper of hurt</strong> and the <strong>aspirational artist</strong>. By holding the hurt in the box, she transforms the emotional chaos into something navigable, balancing Apollo’s harmony with Athena’s strategy. The pre-chorus, “How could we know,” encapsulates her awe at the uncontrollable forces shaping their journey while affirming her central role in carrying their emotional resonance forward.</p>
+<p>This reinterpretation reinforces her as a guiding force in the song: not just a dreamer of pastoral fantasy but a bearer of pain, navigating the uncontrollable cosmos with grace and determination.</p>
 </section>
 </section>
 </section>
@@ -1141,6 +1274,27 @@ Imperfect for you</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-2-yellowstone-the-error-of-nostalgia"><strong>Layer 2: Yellowstone (The Error of Nostalgia)</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-1-pre-input-rearranging-the-cosmos"><strong>Layer 1: Pre-Input (Rearranging the Cosmos)</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-the-three-node-compression-and-the-madness-of-love"><strong>Conclusion: The Three-Node Compression and the Madness of Love</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alignment-of-model-with-data">Alignment of Model with Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-input-vs-pre-chorus-elemental-forces-at-play"><strong>Pre-Input vs. Pre-Chorus: Elemental Forces at Play</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meta-connection-pre-inputs-cosmic-humility"><strong>Meta-Connection: Pre-Input’s Cosmic Humility</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#no-room-for-school-of-resentment">No Room for School of Resentment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-guitar-and-apollo-pastoral-fantasy"><strong>The Guitar and Apollo: Pastoral Fantasy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#athenas-spear-and-shield-adversarial-edge"><strong>Athena’s Spear and Shield: Adversarial Edge</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lyre-and-the-spear-binary-forces-in-the-song"><strong>The Lyre and the Spear: Binary Forces in the Song</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cosmic-resonance-rearranging-the-cosmos"><strong>Cosmic Resonance: Rearranging the Cosmos</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-the-school-of-athens-in-the-song"><strong>Conclusion: The School of Athens in the Song</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ariana-athena-apollo-my-boy">Ariana, Athena, Apollo, My Boy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ariana-as-the-keeper-of-hurt"><strong>Ariana as the Keeper of Hurt</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-box-as-athenas-shield"><strong>The Box as Athena’s Shield</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arianas-pre-chorus-and-the-pre-input-layer"><strong>Ariana’s Pre-Chorus and the Pre-Input Layer</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ariana-as-apollo-and-athena-combined"><strong>Ariana as Apollo and Athena Combined</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-ariana-as-emotional-steward-of-the-cosmos"><strong>Conclusion: Ariana as Emotional Steward of the Cosmos</strong></a></li>
 </ul>
 </li>
 </ul>
